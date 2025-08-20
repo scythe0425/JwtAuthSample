@@ -28,6 +28,7 @@ public class JwtTokenGenerator {
 
         System.out.println("\n생성된 JWT 토큰:\n" + token);
         System.out.println("\n시크릿키(base64):\n" + java.util.Base64.getEncoder().encodeToString(key.getEncoded()));
+        System.out.println("\n시크릿 키 만료 시간: \n "+ EXPIRATION_TIME/(1000 * 60 * 60)+" 시간" );
         sc.close();
     }
 }
